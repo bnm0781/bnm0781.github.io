@@ -11,9 +11,24 @@
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<!-- baidu 优化 -->
+<!-- baidu 搜索优化 -->
 <meta name="baidu-site-verification" content="mUDRKuKcAZ">
-<!-- google 优化 -->
+<!-- baidu 自动推送 -->
+<script>
+  (function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+<!-- google 搜索优化 -->
 <meta name="google-site-verification" content="-4yzp4zgq_kkufAbtjz0VIZjiiX2YpXv4wLceSalrx4">
 <meta name="theme-color" content="#222">
 
@@ -266,6 +281,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-top">
+          <a href="/top/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-signal"></i> <br>
+            
+            热门
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -508,7 +533,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+  <span class="with-love" id="star">
     <i class="fa fa-star"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">bnm0781</span>
@@ -519,9 +544,9 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-      <span class="post-meta-item-text">Site words total count&#58;</span>
+      <span class="post-meta-item-text">总字数&#58;</span>
     
-    <span title="Site words total count">73</span>
+    <span title="总字数">73</span>
   
 </div>
 
@@ -530,6 +555,7 @@
 
 
 <span id="sitetime"></span>
+<!-- 网站运行时间 -->
 <script language="javascript">
 	function siteTime(){
 		window.setTimeout("siteTime()", 1000);
@@ -1201,18 +1227,6 @@
   <script src="/lib/needsharebutton/needsharebutton.js"></script>
 
   <script>
-    
-      pbOptions = {};
-      
-          pbOptions.iconStyle = "default";
-      
-          pbOptions.boxForm = "horizontal";
-      
-          pbOptions.position = "topCenter";
-      
-          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
-      
-      new needShareButton('#needsharebutton-postbottom', pbOptions);
     
     
       flOptions = {};

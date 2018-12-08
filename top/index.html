@@ -137,7 +137,7 @@
 
 
 
-  <meta name="keywords" content="bnm0781, April, blog, 前端, 技术, 分享">
+  <meta name="keywords" content="top,文章阅读量排行榜">
 
 
 
@@ -150,17 +150,18 @@
 
 
 
-<meta name="description" content="立志成为改变世界的程序媛">
+<meta name="description" content="博客文章阅读量排行榜">
+<meta name="keywords" content="top,文章阅读量排行榜">
 <meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="https://bnm0781.github.io/tags/index.html">
+<meta property="og:title" content="热门">
+<meta property="og:url" content="https://bnm0781.github.io/top/index.html">
 <meta property="og:site_name" content="April&#39;s blog">
-<meta property="og:description" content="立志成为改变世界的程序媛">
+<meta property="og:description" content="博客文章阅读量排行榜">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-07T02:49:34.346Z">
+<meta property="og:updated_time" content="2018-12-08T02:34:36.551Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="标签">
-<meta name="twitter:description" content="立志成为改变世界的程序媛">
+<meta name="twitter:title" content="热门">
+<meta name="twitter:description" content="博客文章阅读量排行榜">
 
 
 
@@ -190,13 +191,13 @@
 
 
 
-  <link rel="canonical" href="https://bnm0781.github.io/tags/">
+  <link rel="canonical" href="https://bnm0781.github.io/top/">
 
 
 
 
 
-  <title>标签 | April's blog</title>
+  <title>热门 | April's blog</title>
   
 
 
@@ -368,8 +369,12 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">标签</h1>
+	<h1 class="post-title" itemprop="name headline">热门</h1>
 
+
+	<div class="post-meta">
+		<div class="post-description">博客文章阅读量排行榜</div>
+	</div>
 
 
 </header>
@@ -380,14 +385,32 @@
       <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 1 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/hexo/" style="font-size: 12px; color: #ffc0cb">hexo</a>
-            </div>
-          </div>
+          <p><div id="top"></div></p>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script>AV.initialize("qlyrLu6YsTdD5veg7JL2Kf97-gzGzoHsz", "g5GLLCwJb8gaELo2Va1NpvVr");</script>
+<script type="text/javascript">
+  var time=0
+  var title=""
+  var url=""
+  var query = new AV.Query('Counter');
+  query.notEqualTo('id',0);
+  query.descending('time');
+  query.limit(1000);
+  query.find().then(function (todo) {
+    for (var i=0;i<1000;i++){
+      var result=todo[i].attributes;
+      time=result.time;
+      title=result.title;
+      url=result.url;
+      var content="<a href='"+"https://reuixiy.github.io"+url+"'>"+title+"</a>"+"<br />"+"<font color='#555'>"+"阅读次数："+time+"</font>"+"<br /><br />";
+      document.getElementById("top").innerHTML+=content
+    }
+  }, function (error) {
+    console.log("error");
+  });
+</script>
+
+<style>.post-description { display: none; }</style>
         
       </div>
       
