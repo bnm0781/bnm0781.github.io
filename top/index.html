@@ -385,7 +385,7 @@
       <div class="post-body">
         
         
-          <p><div id="top"></div></p>
+          <p></p><div id="top"></div><p></p>
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
 <script>AV.initialize("qlyrLu6YsTdD5veg7JL2Kf97-gzGzoHsz", "g5GLLCwJb8gaELo2Va1NpvVr");</script>
 <script type="text/javascript">
@@ -410,7 +410,25 @@
   });
 </script>
 
-<style>.post-description { display: none; }</style>
+<style>.post-description { display: none; }</style><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
         
       </div>
       
@@ -569,7 +587,7 @@
     
       <span class="post-meta-item-text">总字数&#58;</span>
     
-    <span title="总字数">73</span>
+    <span title="总字数">127</span>
   
 </div>
 
